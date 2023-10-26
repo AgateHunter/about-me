@@ -60,3 +60,24 @@ let rockGuess = prompt("Do I like rock climbing?")
 }
 rock();
    
+
+function vehicle(){
+
+    carType = prompt("Do I drive a Honda Civic?")
+    carType = carType.toLowerCase();
+
+    switch (carType){
+        case "yes":
+        case "y":
+            alert("Who do you think I am??");
+            break;
+        
+        case "no":
+        case "n":
+            alert("Correct I drive a black truck named Tchalla");
+            rightAnswers++;
+            break;
+    }
+
+}
+vehicle();
