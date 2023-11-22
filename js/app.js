@@ -81,3 +81,58 @@ function vehicle(){
 
 }
 vehicle();
+
+function offspring() 
+
+{
+let kid = ["Sage"];
+let rightAnswer = false;
+
+while( ! rightAnswer ) {
+  let guess = prompt("What is the name of my little human");
+  if( kid.includes( guess ) ) {
+    alert("That's Correct : )");
+    rightAnswer++;
+    rightAnswer = true;
+  }
+}
+}
+
+offspring();
+
+
+function instruments()
+{
+for( let i = 1; i < 9; i++ ) {
+
+   let bassNumber = 9;
+   let bassTrys = 6;
+   let rightAnswer = false;
+
+   while (! rightAnswer && bassTrys >0){
+     let guess = prompt("How many basses do I have?");
+     if (bassNumber === guess) {
+        alert("That's right, and no it's not too many!");
+        rightAnswer = true;
+        rightAnswer++;
+     } else {
+
+   if (bassNumber > guess) {
+    alert ("Not quite; try again");
+    bassTrys--;
+   } else {
+   if (bassNumber < 9) {
+    alert ("Nope! More please!");
+    bassTrys--;
+   } else {
+    alert ("Thanks for playing but you are out of guesses");
+   }
+   }
+}
+}
+}
+}
+
+instruments();
+
+alert ('You scored $[rightAnswer} of 7!');
