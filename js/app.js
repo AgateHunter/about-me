@@ -20,6 +20,7 @@ else {
     
     console.log("Incorrect");
     alert("That might be fun, but it is not my top activity.")
+    rightAnswers--;
 }
 }
 
@@ -82,18 +83,20 @@ function vehicle(){
 }
 vehicle();
 
-function offspring() 
-
-{
 let kid = ["Sage"];
-let rightAnswer = false;
+let kidGuess = prompt("What is the name of my little human?");
+let normalizedKidGuess = kidGuess.toLowerCase();
+console.log(normalizedKidGuess);
 
-while( ! rightAnswer ) {
+function offspring() {
+let rightResponse = false;
+
+while( ! rightResponse ) {
   let guess = prompt("What is the name of my little human");
   if( kid.includes( guess ) ) {
     alert("That's Correct : )");
-    rightAnswer++;
-    rightAnswer = true;
+    rightAnswers++;
+    rightResponse = true;
   }
 }
 }
@@ -108,13 +111,13 @@ for( let i = 1; i < 9; i++ ) {
    let bassNumber = 9;
    let bassTrys = 6;
    let rightAnswer = false;
-
+   let guess = prompt("How many basses do I have?");
+   
    while (! rightAnswer && bassTrys >0){
-     let guess = prompt("How many basses do I have?");
      if (bassNumber === guess) {
         alert("That's right, and no it's not too many!");
         rightAnswer = true;
-        rightAnswer++;
+        rightAnswers++;
      } else {
 
    if (bassNumber > guess) {
@@ -135,4 +138,4 @@ for( let i = 1; i < 9; i++ ) {
 
 instruments();
 
-alert ('You scored $[rightAnswer} of 7!');
+alert ('You scored $[rightAnswers} of 7!');
